@@ -1,0 +1,1036 @@
+:root {
+    --first-color: rgb(236, 159, 15) ;
+    --first-color-strong: rgb(255, 115, 0) ;
+    --first-color-light: rgb(235, 181, 81) ;
+    --first-color-alt:rgb(255, 238, 0);
+    --first-color-alt-light: rgb(255, 248, 151);
+    --second-color: rgb(124, 124, 124);
+    --second-color-light: rgb(197, 194, 194);
+    --second-color-dark: rgb(77, 77, 77);
+    --third-color-gray: #262626;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Arimo', sans-serif;
+    box-sizing: border-box;
+    font-size: 12px;
+    scroll-behavior:smooth;
+} 
+
+body {
+    background: #080808;
+    color: #fff;
+    padding-top: 60px;
+}
+
+/*NUEVO NAVBAR*/
+.header {
+    background-color: var(--third-color-gray);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10001;
+}
+
+.header_content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between ;
+    padding: 0 30px;
+    min-height: 60px;
+}
+
+.logo {
+    color: white;
+    font-size: 2.4rem;
+    text-decoration: none;
+    letter-spacing: -1.5px;
+    font-weight: 600;
+}
+
+.nav {
+    transition: all .3s ease-in-out ;
+}
+
+.nav_list {
+    list-style: none;
+    display: flex;
+    column-gap: 4rem;
+}
+
+.nav_link {
+    color: white;
+    text-decoration: none;
+    font-size: 1.3rem;
+    transition: all .4s ease;
+}
+
+.nav_link:hover, .nav_link:focus {
+    color: var(--first-color-light)
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    height: 2px;
+    width: 27px;
+    background: white;
+    margin: 5px 0;
+    opacity: 0.8;
+    transition: all .3s ease-in-out;
+}
+
+.nav--open  {
+    transform: translate(0) !important;
+}
+
+/*hamburguesa*/
+.hamburger--open .bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+.hamburger--open .bar:nth-child(2) {
+    opacity: 0;
+}
+.hamburger--open .bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+@media (max-width: 650px){
+    
+    .nav{
+        position: fixed;
+        top: 60px;
+        background-color: var(--third-color-gray);
+        width: 100%;
+        left: 0;
+        padding: 10px 0 25px;
+        transform: translateX(-100%);
+    }
+    .nav_list{
+        flex-direction: column;
+        align-items: center;
+        row-gap: 20px;
+    }
+    .nav_link {
+        font-size: 1.3rem;
+        color: var(--second-color-light)
+    }
+    .hamburger{
+        display: block;
+    }
+}
+
+
+.main-title-text {
+    margin-top: 5%;
+    font-size: 30px;
+}
+
+.main-title-text h1{
+    margin-top: 0px;
+    padding-top: 0;
+    font-size: 8rem;
+    letter-spacing: -3px;
+    font-weight:bolder;
+}
+
+.main-title-text p{
+    margin-top: 20px;
+    font-size: 1.7rem;
+    font-weight:lighter;
+    font-style: italic;
+    letter-spacing: 1.1px;
+    line-height: 1.5;
+    padding-right: 50%;
+}
+
+.main-title-text span{
+    margin-top: 20px;
+    font-size: 1.7rem;
+    font-weight:bolder;
+    color: var(--first-color-strong);
+}
+
+/*este es el CONTAINER DE LA PRIMER PAGINA*/
+.container.main {
+    padding-left: 30px;
+    padding-bottom:2rem ;
+    width: 100%;
+    height: 70vh;
+    background-image: url("/images/background.png");
+    background-size: 48%;
+    background-repeat:no-repeat;
+    background-position: 100% 5%;
+}
+
+.container.main {
+    padding-bottom: 11rem;
+    padding-top: 2rem
+}
+
+/* ------------ACERCA DE MI------------ */
+#about{
+    padding: 70px 30px;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1{
+    flex-basis: 35%;
+    display: block;
+    margin-block-end: 0px;
+}
+
+.about-col-1 img{
+    width:100%;
+    border-radius: 5px;
+}
+
+.about-col-2{
+    flex-basis: 60%;
+    
+}
+
+.sub-title{
+    font-size: 4.5rem;
+    font-weight: 800;
+    color:#fff;
+    align-items: center;
+    padding-bottom: 2.4rem ;
+}
+
+.about-description {
+    font-size: 1.4rem;
+    line-height: 1.7;
+    font-weight: 100;
+    color: var(--second-color-light);   
+    padding-right: 0%;
+    margin-bottom: 7rem;
+}
+
+.tab-titles{
+    display: flex;
+    margin: 20px 0 20px;;   
+    background-color: rgba(224, 166, 59, 0.1);
+    justify-content:space-around;
+    
+}
+.tab-links{
+    margin-right: 0px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after{
+    content:'';
+    width: 0;
+    height: 2px;
+    background: var(--first-color-light);
+    position: absolute;
+    left: 0;
+    bottom: -0.4rem;
+    transition: 0.4s ;   
+}
+
+.tab-links.active-link::after{
+    width: 55%;
+}
+
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;   
+    padding: 0.5rem;;
+    line-height: 2rem;
+    font-size: 1.4rem;
+    font-weight:lighter;
+}
+
+.tab-contents ul li span{
+    color: var(--first-color-strong);
+    font-size: 1.5rem;
+}
+
+.tab-contents{
+    display: none;
+}
+
+.tab-contents.active-tab{
+    display: block;
+    margin-bottom: 140px;
+}
+
+/*-----------SERVICIOS-----------*/
+#services{
+    padding: 70px 30px;
+}
+
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 3.8rem;
+    margin-top: 1rem;
+}
+
+/* -----Este es el div cuadrado !!!!!  --------- */
+.services-list div{
+    background-color: var(--third-color-gray);
+    padding: 20px;
+    font-size: 13px;
+    font-weight: 100;
+    border-radius: 4px;
+    transition: background 0.5s, transform 0.5s;
+}
+
+/*-------Este es el icono -----------*/
+.services-list div i{
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+/*-------Estos son los titulos de los cubitos -----------*/
+.services-list div h2{
+    font-size: 2.3rem;
+    font-weight: 900;
+    margin-bottom: 15px;
+    margin-top: 20px
+}
+
+/*-------descripcion del servicio -----------*/
+.services-list div p{
+    font-size: 1.3rem;
+    font-weight: lighter;
+    line-height: 1.5;
+}
+
+/*-------Saber Mas -----------*/
+.services-list div a{
+    text-decoration: none;
+    color: var(--second-color-dark);
+    font-size: 1.6rem;
+    font-weight: 900;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+
+/*-------Hover sobre el div de servicios -----------*/
+.services-list div:hover{
+    background: var(--first-color-light);
+    transform: translateY(-10px);
+    color: white;
+    transition: 0.7s;
+}
+
+.mas:hover{
+    color: var(--first-color-strong);
+}
+
+/*---------------PORTAFOLIO-----------------*/
+#portfolio{
+    padding: 70px 30px;
+    padding-bottom: 2rem;
+}
+
+.lista-de-trabajos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 2.7rem;
+    margin-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.trabajo {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.trabajo img{
+    width: 100%;
+    border-radius: 10px;
+    display:grid;
+    transition: transform 0.8s;
+}
+
+.layer{
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(rgba(0,0,0,0.5), #ffbb00);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    transition: height 0.5s;
+}
+
+.layer h3{
+    text-transform:capitalize;
+    font-size: 1.6rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.layer p{
+    font-size: 1.3rem;
+}
+
+.layer i{
+    font-size: 1.7rem;
+}
+
+/*-----efectos galería----*/
+.trabajo:hover img{
+    transform: scale(1.4);
+}
+
+.trabajo:hover .layer{
+    height:100%;
+}
+/*-----------------------*/
+
+.layer a{
+    margin-top: 20px;
+    color:var(--first-color-strong);
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    border-radius: 30%;
+    height: 60px;
+    text-align: center;
+}
+
+.btn {
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 0.5px solid var(--first-color-light);
+    padding: 14px 30px;
+    border-radius: 4px;
+    text-decoration: none;
+    color: white;
+    background-color: var(--second-color-dark);
+    font-size: 1.5rem;
+    transition: background 0.5s;
+}
+
+.btn:hover {
+    background: var(--first-color-strong);
+}
+
+/*---------Contact-----------------*/
+#contact {
+    padding: 70px 30px 0 30px;
+}
+
+.contact-left{
+    flex-basis: 25%;
+}
+    
+.contact-right{
+    flex-basis: 75%;
+}
+
+.contact-left p {
+    font-size: 1.6rem;
+    line-height: 1.8;
+}
+
+.contact-left p i{
+    font-size: 2.1rem;;
+    margin-right: 1.3rem;
+    color: var(--first-color-light)
+}
+
+.contact-left .telefono {
+    color: lightblue;
+}
+
+/* --whatsapp link-- */
+.contact-left p a{
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: white;
+}
+.contact-left .whatsapp {
+    color: greenyellow;   
+}
+
+/* --iconos redes sociales-- */
+.social-icons{
+    margin-top: 20px;
+}
+
+.social-icons a{
+    text-decoration: none;
+    font-size: 40px;
+    margin-right: 15px;
+    color: var(--second-color-light);
+    display: inline-block;
+    transition: transform 0.4s;
+}
+
+.social-icons i{
+    font-size: 2rem;
+}
+
+.social-icons a:hover {
+    color: var(--first-color-strong);
+    transform: translateY(-5px);
+}
+
+.btn.btn2 {
+    display: inline-block;
+    background: var(--first-color);
+    color: var(--third-color-gray)
+}
+
+.btn.btn2:hover {
+    background: var(--first-color-strong);
+    color: white;
+    box-shadow: 0 0 5px rgb(227, 238, 11);
+}
+
+/*tamaño del formulario*/
+.contact-right form{
+    width: 70%;
+}
+
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: var(--second-color-dark);
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    border-radius: 6px;
+    font-size: 1.5rem;
+}
+
+/*efecto GLOW FORMULARIO*/
+input[type=text], textarea {
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+  border: 1px solid #DDDDDD;
+}
+ 
+input[type=email]:focus, textarea:focus {
+  box-shadow: 0 0 5px rgb(227, 238, 11);
+  border: 1px solid rgb(238, 170, 1);
+}
+input[type=text]:focus, textarea:focus {
+    box-shadow: 0 0 5px rgb(227, 238, 11);
+    border: 1px solid rgb(238, 170, 1);
+}
+
+form .btn2{
+    padding: 14px 60px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.copyright {
+    width: 100%;
+    height: 1rem;
+    text-align: center;
+    padding: 2rem 2rem;
+    background: var(--third-color-gray);
+    font-weight: 300;
+    margin-top: 1rem;
+}
+
+
+
+
+/*BOTON SCROLL TO TOP*/      
+#myBtn {
+    display: none; /* oculto por defecto */
+    position: fixed;
+    bottom: 20px; /* al final de la pagina */
+    right: 5%; /* 5% de la derecha */
+    z-index: 99; 
+    border: none; 
+    outline: none; 
+    background-color: var(--first-color);
+    color: var(--first-color-alt-light);
+    cursor: pointer; 
+    padding: 5px 10px; 
+    border-radius: 100%; 
+    font-size: 1.5rem; 
+    transition: 0.9s;
+  }
+  #myBtn i{
+    font-size: 40px;
+    font-weight: 900;;
+  }
+  #myBtn:hover {
+  background-color: var(--second-color-dark);
+  transform: translateY(-10px);
+  box-shadow: 0 0 5px white;
+}
+
+
+/*--------------------------PARA PANTALLAS PEQUEÑAS-----------------------------------------*/
+@media only screen and (max-width: 650px){
+    .container.main{
+        padding-top: 0;
+        margin-top: 0;
+        width: 100%;
+        padding-left: 3%;
+        height: 40vh;
+        background-size: 60%;
+        background-repeat:no-repeat;
+        background-position: 120% 1% ;
+    }
+
+    .main-title-text {
+        margin-top: 5%;
+        font-size: 30px;
+    }
+    
+
+    .main-title-text h1{
+        margin-top: 0%;
+        padding-top: 0;
+        font-size: 5rem;
+        font-weight:bolder;
+        padding-right: 40%;
+    }
+    
+    .main-title-text p{
+        margin-top: 20px;
+        font-size: 1.3rem;
+        font-weight:lighter;
+        font-style: italic;
+        letter-spacing: 1.1px;
+        line-height: 1.2;
+        padding-right: 40%;
+    }
+
+
+    /*RESPONSIVE ABOUT*/
+    #about{
+        padding: 40px 30px;
+    }
+    
+    .about-col-1{
+        flex-basis: 100%;
+        display:contents;
+        margin-block-end: 0px;
+    }
+    .about-col-1 .img-about{
+        width:40%
+    }
+
+    .about-col-2{
+        flex-basis: 100%;
+        display: contents;
+    }
+    
+
+    .sub-title{
+        font-size: 2.5rem;
+        font-weight: 800;
+        color:#fff;
+        align-items: center;
+        padding-bottom: 2.4rem ;
+        padding-top: 2rem;
+    }
+
+    .tab-titles{
+        display: flex;
+        flex-direction:row;
+        margin: 20px 0 20px;;   
+        background-color: rgba(224, 166, 59, 0.1);
+    }
+
+    .tab-titles p{
+        font-size: 1.3rem;
+        margin-right: 10px;
+    }
+    
+    .about-description {
+        font-size: 1.2rem;
+        line-height: 1.7;
+        font-weight: 100;
+        color: var(--second-color-light);   
+        padding-right: 0%;
+        margin-bottom: 2rem;
+    }
+
+    .tab-contents ul li{
+        list-style: none;
+        margin: 10px 0;   
+        padding: 0.5rem;;
+        line-height: 2rem;
+        font-size: 1.2rem;
+        font-weight:lighter;
+    }
+    
+    .tab-contents ul li span{
+        color: var(--first-color-strong);
+        font-size: 1.3rem;
+    }
+    
+    /*RESPONSIVE SERVICES------------------------------*/
+    #services{
+        padding: 70px 30px;
+    }
+    
+    .services-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-gap: 1.8rem;
+        margin-top: 1rem;
+    }
+    
+    .services-list div i{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .services-list div h2{
+        font-size: 1.6rem;
+        font-weight: 900;
+        margin-bottom: 15px;
+        margin-top: 10px
+    }
+    
+    .services-list div p{
+        font-size: 1.3rem;
+        font-weight: 100;
+        line-height: 1.5;
+    }
+    
+    /*RESPONSIVE PORTAFOLIO-----------------------------*/
+    .lista-de-trabajos {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-gap: 1.7rem;
+        margin-top: 20px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .layer {
+        padding: 0 10px;
+        
+    }
+
+    .layer h3{
+        text-transform:capitalize;
+        padding-top: 2rem;
+        font-size: 1.3rem;
+        font-weight: 900;
+        margin-bottom: 5px;
+    }
+    
+    .layer p{
+        font-size: 1.1rem;
+        margin-bottom: 0px;
+    }
+    
+    .layer i{
+        font-size: 1.4rem;
+    }
+    
+    .sub-title{
+        font-size: 2.5rem;
+        font-weight: 800;
+        color:#fff;
+        align-items: center;
+        padding-bottom: 2.4rem ;
+    }
+
+    .tab-titles{
+        display: flex;
+        
+        margin: 20px 0 20px;;   
+        background-color: rgba(224, 166, 59, 0.1);
+    }
+
+    /*responsive CONTACT SECTION*/
+    .contact-right form{
+        width: 100%;
+    }
+    .contact-left, .contact-right {
+        flex-basis: 100%;
+    }
+    .contact-left h1{
+        padding-bottom: 1rem;
+    }
+    .contact-left p i {
+        font-size: 1.5rem;
+    }
+    .contact-left p{
+        margin-top: 10px;
+        font-size: 1.3rem;
+    }
+    .contact-left .whatsapp {
+        color: rgba(173, 255, 47, 0.8);
+        font-size: 1.5rem;
+    }
+    .contact-left p a {
+        font-size: 1.1rem;
+    }
+    .social-icons{
+        margin-top: 0;
+    }
+    .social-icons i{
+        font-size: 1.4rem;
+    }
+
+    form input, form textarea{
+        width: 100%;
+        border: 0;
+        outline: none;
+        background: var(--second-color-dark);
+        padding: 8px;
+        margin: 8px 0;
+        color: #fff;
+        border-radius: 6px;
+        font-size: 1.1rem;
+    }
+
+    /*botones-----*/
+    .btn.btn2 {
+        font-size: 1.1rem;
+        display: inline-block;
+        background: var(--first-color);
+        color: var(--third-color-gray);
+        margin-top: 5px;
+    }
+    
+    .btn {
+        display: block;
+        margin: 20px auto;
+        padding: 8px 15px;
+        border-radius: 4px;
+        color: white;
+        font-size: 1.1rem;
+    }
+
+    form .btn2{
+        padding: 8px 15px;
+        font-size: 1.1rem;
+        cursor: pointer;
+        margin-top: 8px auto;
+    }
+    
+    
+    /*boton SCROLL UP*/
+    #myBtn i{
+        font-size: 20px;
+        font-weight: 900;
+    }
+}
+   
+/*------- MINIMAL SIZE --------------------------------- --------------*/
+@media only screen and (max-width: 320px){
+
+    .bar {
+        height: 2px;
+        width: 27px;
+        background: white;
+        margin: 5px 0;
+        opacity: 0.8;
+        transition: all .3s ease-in-out;
+    }
+    
+    .logo{
+        font-size: 1.5rem;
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    .main-title-text h1{
+        font-size: 2.4rem;
+        letter-spacing:0px;
+        padding-right: 0;
+    }
+
+    .main-title-text p {
+        font-size: 1rem;
+    }
+
+    .main-title-text span{
+        margin-top: 20px;
+        font-size: 1rem;
+        font-weight:bolder;
+        color: var(--first-color-strong);
+    }
+
+    #about{
+        padding: 40px 30px;
+    }
+    
+    .about-col-1{
+        flex-basis: 100%;
+        display:contents;
+        margin-block-end: 0px;
+    }
+
+    .about-col-2{
+        flex-basis: 100%;
+        display: contents;
+    }
+    
+    #img-about{
+        width: 40%;
+    }
+
+    .sub-title{
+        font-size: 2.5rem;
+        font-weight: 800;
+        color:#fff;
+        align-items: center;
+        padding-bottom: 2.4rem ;
+        padding-top: 2rem;
+    }
+
+    .tab-titles{
+        display: flex;
+        width: 100%;
+        flex-direction:column;
+        line-height: 2;;
+        background-color: rgba(224, 166, 59, 0.1);
+    }
+
+    .tab-titles p{
+        font-size: 1.2rem;
+    }
+    
+    .about-description {
+        font-size: 1.2rem;
+        line-height: 1.7;
+        font-weight: 100;
+        color: var(--second-color-light);   
+        padding-right: 0%;
+        margin-bottom: 2rem;
+    }
+
+    /*-------Servicios -----------*/
+
+    .services-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-gap: 1rem;
+        margin-top: 1rem;
+    }
+    
+    .services-list div i{
+        font-size: 18px;
+        margin-bottom: 0px;
+    }
+    
+    .services-list div h2{
+        font-size: 1.3rem;
+        font-weight: 900;
+        margin-bottom: 15px;
+        margin-top: 10px
+    }
+    
+    .services-list div p{
+        font-size: 1.1rem;
+        font-weight: 100;
+        line-height: 1.3;
+    }
+
+    /*-------Saber Mas -----------*/
+    .services-list div a{
+        font-size: 1.3rem;
+        font-weight: 900;
+        margin-top: 10px;
+    }
+
+    /*trabajos*/
+    .lista-de-trabajos {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-gap: 1.4rem;
+        margin-top: 20px;
+        padding-left: 0;
+        padding-right: 0px;
+    }
+
+    .layer {
+        padding: 0 10px;
+    }
+
+    .layer h3{
+        text-transform:capitalize;
+        padding-top: 2rem;
+        font-size: 1.3rem;
+        font-weight: 900;
+        margin-bottom: 5px;
+    }
+    
+    .layer p{
+        font-size: 1.1rem;
+        margin-bottom: 0px;
+    }
+    
+    .layer i{
+        font-size: 1.4rem;
+    }
+
+
+    /*contact*/
+    .contact-left h1{
+        padding-bottom: 1rem;
+    }
+    .contact-left p i {
+        font-size: 1.2rem;
+    }
+    .contact-left p{
+        margin-top: 10px;
+        font-size: 1rem;
+    }
+    .contact-left .whatsapp {
+        color: rgba(173, 255, 47, 90);
+        font-size: 1.2rem;
+    }
+    .contact-left p a {
+        font-size: 1rem;
+    }
+    .social-icons{
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
+    .social-icons i{
+        font-size: 1.4rem;
+    }
+
+
+    .copyright p{
+        font-size: .7rem;
+        font-weight: 100;
+
+    }
+
+}

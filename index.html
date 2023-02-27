@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cv personal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="js/script.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+</head>
+<body>
+    <header class="header">
+        <div class="header_content">
+            <a href="#" class="logo">Alejandra Paz</a>
+            <nav class="nav">
+                <ul class="nav_list">
+                    <li class="nav_item">
+                        <a href="#" class="nav_link">Inicio</a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="#about" class="nav_link">Acerca de mi</a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="#services" class="nav_link">Servicios</a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="#portfolio" class="nav_link">Portafolio</a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="#contact" class="nav_link">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+    </header>
+    <div class="container main" id="main_page">
+        <div class="main-title-text">
+            <h1>Arquitecta</h1>
+            <p>"La <span>arquitectura</span> es la voluntad de la época" traducida a espacio" <strong>Ludwig Mies van der Rohe</strong> </p>
+        </div>
+    </div>
+
+
+     <!--ACERCA DE MI  -->        
+     <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img class="img-about" src="/images/about.png" alt="fotoperfil">  
+                    <img class="img-about" src="images/pexels-photo-3775087.webp" alt="fotoperfil">                 
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">Acerca de mi</h1>
+                    <p class="about-description">Arquitecta con más de 9 años de experiencia en distintos estudios de arquitectura. Trabajando tanto en proyectos residenciales como comerciales. Me he especializado en el proceso de conceptualización y diseño de espacios habitacionales con altos componentes paisajíticos y urbanísticos. He firmado 2 proyectos comerciales de eco-arquitectura, una rehabilitación ya inaugurada y un proyecto de obra nueva actualmente en construcción</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('experiencia')">Experiencia</p>
+
+                        <p class="tab-links" onclick="opentab('habilidades')">Habilidades</p>
+                        <p class="tab-links" onclick="opentab('educación')">Formación</p>
+                    </div>
+                    <div class="tab-contents" id="habilidades">
+                        <ul>
+                            <li><span>Diseño</span><br>Complejos</li>
+                            <li><span>Planificación</span><br>Urbanística</li>
+                            <li><span>Software</span><br>Autocad, SketchUp, Autodesk BIM360, VectorWorks Architect, Revizto</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents active-tab" id="experiencia">
+                        <ul>
+                            <li><span>2017 - presente</span><br>CAMPDOMUS ESTUDIO - Arquitecta Diseñadora <br><br> En este estudio de arquitectura boutique especializado en el diseño y consrucción de proyectos de rehabilitación, urbanismo y negocio, mis principales funciones han sido: Elaboración de de dibjuos, planos y modelos 3D, Elaboración de presupuestos y planes de obra con BIM, Coordinación de licitaciones de obra para construcción de equipamientos públicos, evaluación y emisión de certificados energéticos para locales comerciales. </li>
+                            <li><span>2014 - 2017</span><br>CONREM TRAMWAY - Arquitecta Junior <br><br> Mis primeras prácticas profesionales en una de las 3 promotoras con más obras residenciales en Barcelona. Mis tareas han sido principalmente: Interpretar planos de obra, Coordinación de las obras, Redacción de proyectos parciales y documentos técnicos como certificados de final de obra.  </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="educación">
+                        <ul>
+                            <li><span>2015 - 2021</span><br>Master in Urban Design and Architecture - Tecnológico de Monterrey</li>
+                            <li><span>2009 - 2014</span><br>Grado en Estudios de Arquitectura <br> Universitat Politécnica de Catalunya ETSAB</li>
+                            <li><span>2009 - 2014</span><br>Inglés Comp.Profesional completa - C2</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- #finaldeacercade mi -->
+    
+<!-- SERVICIOS                                              -->                  
+<div id="services">
+    <div class="container services">
+        <h1 class="sub-title">Mis Servicios</h1>
+        <div class="services-list">
+            <div>
+                <i class="bi bi-pencil"></i>
+                <h2>Planos</h2>
+                <p>El servicio de planos, relevamientos está pensado especialmente para aquellas personas que necesitan poner en orden la documentación de sus propiedades (ampliaste remodelaste o demoliste superficie).
+                </p>
+                <a href="#contact" class="mas"> Mas +</a>
+            </div>
+            <div>
+                <i class="bi bi-people"></i>
+                <h2>Asesoramiento</h2>
+                <p>Asesoramos a inversores y fondos de inversión en la selección y toma de decisiones en inversiones inmobiliarias.
+                </p>
+                <a href="#contact" class="mas">Mas +</a>
+            </div>
+            <div>
+                <i class="bi bi-bricks"></i>
+                <h2>Construcciones</h2>
+                <p>Ofrezco un plan integral para aquellos que ya cuentan con un proyecto de arquitectura, y deciden comenzar con la construcción a precio fijo, con garantía y llave en mano.
+
+                </p>
+                <a href="#contact" class="mas">Mas +</a>
+            </div>
+            <div>
+                <i class="bi bi-reception-2"></i>
+                <h2>Estudio de viabilidad</h2>
+                <p> Elección de locaciones según el emprendimiento a construir, verificando incidencias de la tierra en los costos generales. .
+                </p>
+                <a href="#contact" class="mas">Mas +</a>
+            </div>
+            <div>
+                <i class="bi bi-bricks"></i>
+                <h2>Gerenciamiento</h2>
+                <p>Coordinación de subcontratos según cronogramas de obra, estudios de curvas de riesgo, seguimiento y corrección a través de medidas paliativas.
+                </p>
+                <a href="#contact" class="mas">Mas +</a>
+            </div>
+            <div>
+                <i class="bi bi-file-earmark-text"></i>
+                <h2>Documentación</h2>
+                <p>Documentación de apoyo para comercialización de unidades o servicios cuando corresponde, plantas con sugerencia en equipamientos, metrajes propios, áreas comunes, etc.
+                </p>
+                <a href="#contact" class="mas">Mas +</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- #final de servicios -->
+
+<!-- PORTAFOLIO                                     -->       
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">Mis Trabajos</h1>
+        <div class="lista-de-trabajos">
+            <div class="trabajo">
+                <img src="/images/trabajoB.jpg" alt="trabajos">
+                <div class="layer">
+                    <h3>Diseño sostenible</h3>
+                    <p>Terrazas verdes construidas en el edifico Antares</p>
+                    <a href="https://www.construible.es/arquitectura-sostenible" target="_blank" class="supericono"><i class="bi bi-box-arrow-up-right"></i></a>
+                </div>
+            </div>
+            <div class="trabajo">
+                <img src="/images/trabajoD.jpg" alt="trabajos">
+                <div class="layer">
+                    <h3>Housing</h3>
+                    <p>Loft construido mediante movimiento de terreno</p>
+                    <a href="https://www.airbnb.com.ar/rooms/18075431?source_impression_id=p3_1677341820_DS1eUj8LiYEqzDRw" target="_blank"><i class="bi bi-box-arrow-up-right"></i></a>
+                </div>
+            </div>
+            <div class="trabajo">
+                <img src="/images/trabajoF.jpg" alt="trabajos">
+                <div class="layer">
+                    <h3>Refacción del Grand Rex Av.Corrientes</h3>
+                    <p>Actualización de la fachada y entradas</p>
+                    <a href="https://es.wikipedia.org/wiki/Teatro_Gran_Rex" target="_blank"><i class="bi bi-box-arrow-up-right"></i></a>
+                </div>
+       </div>
+            <div class="trabajo">
+                <img src="/images/TrabajoG.jpg" alt="trabajos">
+                <div class="layer">
+                    <h3>Nonna Nera, caffè, </h3>
+                    <p>Este espacio, desde su diseño y cuidado de detalles, transmite una atmósfera minimalista e industrial</p>
+                    <a href="https://nonna.restaurant/" target="_blank"><i class="bi bi-box-arrow-up-right"></i></a>
+                </div>
+            </div>
+            <div class="trabajo">
+                <img src="/images/trabajoH.jpg" alt="trabajos">
+                <div class="layer">
+                    <h3>Triplex Capital Federal 2021</h3>
+                    <p>Diseño exclusivo para una superficie de 730m2</p>
+                    <a href="https://www.zonaprop.com.ar/propiedades/excelente-triplex-de-calidad-4amb-saavedra-48452659.html" target="_blank"><i class="bi bi-box-arrow-up-right"></i></a>
+                </div>
+            </div>
+            <div class="trabajo">
+                <img src="/images/trabajoI.jpg" alt="trabajos">
+                <div class="layer">
+                    <h3>Jardines de Dumbledore</h3>
+                    <p>Refacción exclusiva  de la fachada y entrada principal</p>
+                    <a href="http://www.dumbledor.com.ar/dumbledor-jardines.php" target="_blank"><i class="bi bi-box-arrow-up-right"></i></a>
+                </div>
+            </div>
+            <div class="trabajo">
+                <img src="/images/trabajoL.jpg" alt="trabajos">
+                <div class="layer">
+                    <h3>Obra: vivienda, Villa Gral Belgrano</h3>
+                    <p>160m2, año 2019</p>
+                    <a href="https://www.arquimaster.com.ar/galeria/obra158.htm" target="_blank"><i class="bi bi-box-arrow-up-right"></i></a>
+                </div>
+
+            </div>
+            <div class="trabajo">
+                <img src="/images/trabajoM.jpg" alt="trabajos">
+                <div class="layer">
+                    <h3>Casa Farnsworth 2017</h3>
+                    <p>Se emplaza a 1,6 metros sobre el terreno para dejar el lugar intacto, exaltando la contemplación del paisaje</p>
+                    <a href="https://es.wikipedia.org/wiki/Casa_Farnsworth" target="
+                    "><i class="bi bi-box-arrow-up-right"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#redes-sociales" class="btn" >Ver mas</a>
+    </div>
+</div>
+
+<!--                    CONTACTO                        -->
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Hablemos</h1>
+                <p><i class="bi bi-send"></i>arqalejandrapaz@gmail.com</p>
+                <p><i class="bi bi-phone telefono"></i>+54 351 3894675</p>
+                <p><a href="https://wa.me/543513894675" target="_blank"><i class="bi bi-whatsapp whatsapp"></i>WhatsApp</a></p>
+                <div class="social-icons" id="redes-sociales">
+                    <a href="https://www.facebook.com/mcastellanoslizano/?locale=es_LA" target="_blank"><i class="bi bi-facebook"></i></a>
+                    <a href="https://twitter.com/mariapazgaga?lang=es" target="_blank"><i class="bi bi-twitter"></i></a>
+                    <a href="https://www.instagram.com/arq.picernopaz/?hl=es-la" target="_blank"><i class="bi bi-instagram"></i></a>
+                    <a href="https://ar.linkedin.com/in/maria-paz-de-lorenz-628581169" target="_blank"><i class="bi bi-linkedin"></i></a>
+                </div>
+                <a href="" class="btn btn2">Descargar CV</a>
+            </div>
+            <div class="contact-right">
+                <form action="/action_page.php">
+                    <input type="text" name="nombre" placeholder="Tu nombre" required>
+                    <input type="email" name="email" placeholder="Tu email" required>
+                    <textarea name="Mensaje" rows="6" placeholder="Tu mensaje" required></textarea>
+                    <button type="submit" class="btn btn2">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!--fin de la sección contacto-->
+
+<div class="copyright">
+    <p>Esteban Rozzi 2023 - Todos los derechos reservados</p>
+</div>
+
+                    
+<!--Esto para el botón scroll to top-->            
+<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="bi bi-chevron-up"></i></button> 
+
+<script>// obtener el boton
+    let mybutton = document.getElementById("myBtn");    
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+    
+    function topFunction() {
+      document.body.scrollTop = 0; 
+      document.documentElement.scrollTop = 0; 
+    } 
+    </script>
+
+<!--ESTO ES LOS TABS DE ACERCA DE MI-->
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }    
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }    
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+
+    </body>
+</html>
